@@ -155,11 +155,11 @@ return [
         /*
          * Application Service Providers...
          */
-        BeBack\Providers\AppServiceProvider::class,
-        BeBack\Providers\AuthServiceProvider::class,
-        // BeBack\Providers\BroadcastServiceProvider::class,
-        BeBack\Providers\EventServiceProvider::class,
-        BeBack\Providers\RouteServiceProvider::class,
+        Broadcasting\Providers\AppServiceProvider::class,
+        Broadcasting\Providers\AuthServiceProvider::class,
+        // Broadcasting\Providers\BroadcastServiceProvider::class,
+        Broadcasting\Providers\EventServiceProvider::class,
+        Broadcasting\Providers\RouteServiceProvider::class,
 
         Laracasts\Flash\FlashServiceProvider::class,
     ],

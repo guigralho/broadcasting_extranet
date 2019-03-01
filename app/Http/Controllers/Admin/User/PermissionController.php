@@ -1,9 +1,9 @@
 <?php
 
-namespace BeBack\Http\Controllers\Admin\User;
+namespace Broadcasting\Http\Controllers\Admin\User;
 
 use Illuminate\Http\Request;
-use BeBack\Http\Controllers\Admin\Controller;
+use Broadcasting\Http\Controllers\Admin\Controller;
 
 class PermissionController extends Controller
 {

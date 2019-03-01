@@ -14,12 +14,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $user = BeBack\Models\User::create([
-            'user_group_id' => \BeBack\Models\UserGroup::first()->id,
+        $user = Broadcasting\Models\User::create([
+            'user_group_id' => \Broadcasting\Models\UserGroup::first()->id,
             'name' => 'Interaktiv',
             'email' => 'interaktiv@interaktiv.com.br',
             'password' => Hash::make('inter456$%'),
-        ])->assignRole(\BeBack\Models\UserGroup::first()->name);
+        ])->assignRole(\Broadcasting\Models\UserGroup::first()->name);
 
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace BeBack\Http\Controllers\Auth;
+namespace Broadcasting\Http\Controllers\Auth;
 
-use BeBack\Models\User;
-use BeBack\Http\Controllers\Controller;
+use Broadcasting\Models\User;
+use Broadcasting\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;

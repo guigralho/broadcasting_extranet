@@ -1,6 +1,6 @@
 <?php
 
-namespace BeBack\Exceptions;
+namespace Broadcasting\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

@@ -1,20 +1,20 @@
 <?php
 
-namespace BeBack\Http\Controllers\Admin\User;
+namespace Broadcasting\Http\Controllers\Admin\User;
 
-use BeBack\PermissionTrait;
+use Broadcasting\PermissionTrait;
 use Illuminate\Http\Request;
-use BeBack\Http\Controllers\Admin\Controller;
-use BeBack\Services\UserService;
-use BeBack\Services\UserGroupService;
+use Broadcasting\Http\Controllers\Admin\Controller;
+use Broadcasting\Services\UserService;
+use Broadcasting\Services\UserGroupService;
 use Illuminate\Support\Facades\Validator;
-use BeBack\Models\User;
+use Broadcasting\Models\User;
 use Auth;
 use Mail;
 
 /**
  * Class UserController
- * @package BeBack\Http\Controllers\Admin\User
+ * @package Broadcasting\Http\Controllers\Admin\User
  */
 class UserController extends Controller
 {

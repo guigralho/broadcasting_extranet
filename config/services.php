@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => BeBack\User::class,
+        'model' => Broadcasting\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

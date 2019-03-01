@@ -1,9 +1,9 @@
 <?php
 
-namespace BeBack\Services;
+namespace Broadcasting\Services;
 
-use BeBack\Models\Menu;
-use BeBack\Models\User;
+use Broadcasting\Models\Menu;
+use Broadcasting\Models\User;
 use Cache;
 
 class MenuService

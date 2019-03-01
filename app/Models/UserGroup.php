@@ -1,16 +1,16 @@
 <?php
 
-namespace BeBack\Models;
+namespace Broadcasting\Models;
 
-use BeBack\Observers\DeleteObserver;
-use BeBack\Observers\UserGroupObserver;
+use Broadcasting\Observers\DeleteObserver;
+use Broadcasting\Observers\UserGroupObserver;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use BeBack\Constants\UserStatusConstant;
+use Broadcasting\Constants\UserStatusConstant;
 
 /**
  * Class UserGroup
- * @package BeBack\Models
+ * @package Broadcasting\Models
  */
 class UserGroup extends Model
 {

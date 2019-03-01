@@ -1,6 +1,6 @@
 <?php
 
-namespace BeBack\Http\Middleware;
+namespace Broadcasting\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
 

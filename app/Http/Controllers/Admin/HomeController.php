@@ -1,9 +1,9 @@
 <?php
 
-namespace BeBack\Http\Controllers\Admin;
+namespace Broadcasting\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use BeBack\Http\Controllers\Admin\Controller;
+use Broadcasting\Http\Controllers\Admin\Controller;
 
 class HomeController extends Controller
 {

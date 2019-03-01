@@ -470,7 +470,7 @@ body.menu-pin .overlay .overlay-brand {
   float: right;
   display: inline;
   font-size: 16px;
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   height: auto;
   content: "\f104";
   font-weight: 300;
@@ -527,7 +527,7 @@ body.menu-pin .overlay .overlay-brand {
   margin-right: 20px;
   display: inline;
   font-size: 16px;
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   height: auto;
   content: "\f104";
   font-weight: 300;
@@ -540,7 +540,7 @@ body.menu-pin .overlay .overlay-brand {
   margin-top: 1px;
   margin-right: 18px;
   display: inline;
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   height: auto;
   font-size: 16px;
   -webkit-transform: rotate(-90deg);
@@ -589,7 +589,7 @@ body.menu-pin .overlay .overlay-brand {
   color: #fff;
 }
 [data-toggle-pin="sidebar"] > i:before {
-  content: "\f10c";
+  content: "\f111";
 }
 /* Sidebar icon holder
 ------------------------------------
@@ -718,7 +718,7 @@ body.menu-pin .overlay .overlay-brand {
   float: right;
   display: inline;
   font-size: 16px;
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   height: auto;
   content: "\f104";
   font-weight: 300;
@@ -960,7 +960,7 @@ body.menu-pin .overlay .overlay-brand {
 }
 .horizontal-app-menu .menu-bar ul li a .arrow:before {
   font-size: 16px;
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   height: auto;
   content: "\f104";
   font-weight: 300;
@@ -1728,7 +1728,7 @@ body.menu-pin .overlay .overlay-brand {
 .breadcrumb > .breadcrumb-item + .breadcrumb-item:before {
   padding: 0 5px;
   color: #515050;
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   content: "\f105";
   font-size: 12px;
   font-weight: bold;
@@ -2870,7 +2870,7 @@ blockquote {
 }
 blockquote:before {
   content: '';
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   content: "\f10d";
   margin-right: 13px;
   float: left;
@@ -2892,7 +2892,7 @@ blockquote.pull-right {
 blockquote.pull-right:before {
   float: right;
   content: '';
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   content: "\f10d";
   margin-left: 13px;
   margin-right: 0;
@@ -4256,7 +4256,7 @@ Animated buttons
   transform: translateX(200%);
 }
 .btn-animated.fa:before {
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
 }
 .btn-animated.pg:before {
   font-family: "pages-icon";
@@ -6095,7 +6095,7 @@ body > .pgn-wrapper {
   color: #626262 !important;
 }
 .card-group .card-header .card-title > a:after {
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Pro";
   content: "\f056";
   position: absolute;
   right: 13px;
@@ -6839,7 +6839,7 @@ fieldset[disabled] .form-control {
   border-width: 8.5px;
 }
 .checkbox input[type=checkbox]:checked + label::after {
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Pro";
   content: "\F00C";
   color: #fff;
 }
@@ -6867,7 +6867,7 @@ fieldset[disabled] .form-control {
   position: relative;
 }
 .checkbox.right input[type=checkbox]:checked + label::after {
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Pro";
   content: "\F00C";
   position: absolute;
   right: -27px;
@@ -7477,7 +7477,7 @@ body.rtl .checkbox label::after {
   z-index: 100;
 }
 .input-group-addon .arrow:before {
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Pro";
   content: "\f0da";
   font-size: 23px;
   position: absolute;
@@ -7485,7 +7485,7 @@ body.rtl .checkbox label::after {
   top: -2px;
 }
 .input-group-addon:last-child .arrow:before {
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Pro";
   content: "\f0d9";
   font-size: 23px;
   position: absolute;
@@ -7521,7 +7521,7 @@ https://github.com/eternicode/bootstrap-datepicker
 .datepicker thead tr .next:before,
 .datepicker thead tr .prev:before {
   color: #6d5cae;
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Pro";
   font-size: 10px;
 }
 .datepicker thead tr .prev:before {
@@ -8531,7 +8531,7 @@ div.cs-skin-slide.cs-active .cs-backdrop {
 div.cs-skin-slide > span:after,
 div.cs-skin-slide.cs-active > span:after {
   content: "\f0d7";
-  font-family: FontAwesome;
+  font-family:"Font Awesome 5 Pro";
   color: #5e5e5e;
 }
 div.cs-skin-slide .cs-options {
@@ -8834,7 +8834,7 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
   top: -1px;
   position: relative;
   margin-right: 8px;
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Pro";
   -webkit-transition: all 0.12s linear;
   transition: all 0.12s linear;
 }

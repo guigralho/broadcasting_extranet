@@ -1,9 +1,9 @@
 <?php
 
-namespace BeBack\Observers;
+namespace Broadcasting\Observers;
 
 use Illuminate\Support\Facades\DB;
-use BeBack\Models\UserGroup;
+use Broadcasting\Models\UserGroup;
 use Spatie\Permission\Exceptions\RoleAlreadyExists;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;

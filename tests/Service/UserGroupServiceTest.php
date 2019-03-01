@@ -2,10 +2,10 @@
 
 namespace Tests;
 
-use BeBack\Constants\UserGroupStatusConstant;
-use BeBack\Models\UserGroup;
-use BeBack\Services\UserGroupService;
-use BeBack\Services\UserGroupServices;
+use Broadcasting\Constants\UserGroupStatusConstant;
+use Broadcasting\Models\UserGroup;
+use Broadcasting\Services\UserGroupService;
+use Broadcasting\Services\UserGroupServices;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;

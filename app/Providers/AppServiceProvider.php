@@ -1,6 +1,6 @@
 <?php
 
-namespace BeBack\Providers;
+namespace Broadcasting\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;

@@ -1,10 +1,10 @@
 <?php
-namespace BeBack\Constants;
+namespace Broadcasting\Constants;
 
 class UserStatusConstant
 {
 
-    use \BeBack\ConstantTrait;
+    use \Broadcasting\ConstantTrait;
 
     CONST ACTIVE = 'Ativo';
 

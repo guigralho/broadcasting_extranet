@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => BeBack\Models\User::class,
+            'model' => Broadcasting\Models\User::class,
         ],
 
         // 'users' => [

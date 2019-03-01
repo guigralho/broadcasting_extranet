@@ -12,17 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('login'));
 });
 
 Auth::routes();
 
 
-Route::namespace('Site')->group(function () {
-	Route::any('/', 'HomeController@index')->name('site.home');
-});
-
-Route::group(['prefix' => 'extranet', 'middleware' => ['auth', 'check.area']], function () {
+Route::group(['middleware' => ['auth']], function () {
 	Route::namespace('Admin')->group(function () {
         Route::get('/set_pin', 'HomeController@setPin')->name('admin.set_pin');
 
@@ -52,6 +48,18 @@ Route::group(['prefix' => 'extranet', 'middleware' => ['auth', 'check.area']], f
         });
         Route::group(['middleware' => ['permission:3-delete']], function () {
             Route::get('/groups/delete/{userGroupId}', 'User\UserGroupController@delete')->name('admin.user_group.delete');
+        });
+
+        //photos
+        Route::group(['middleware' => ['permission:5-list']], function () {
+            Route::get('/photos', 'User\PhotoController@index')->name('admin.photo');
+        });
+        Route::group(['middleware' => ['permission:5-write']], function () {
+            Route::any('/photos/add', 'User\PhotoController@add')->name('admin.photo.add');
+            Route::any('/photos/edit/{photoId}', 'User\PhotoController@edit')->name('admin.photo.edit');
+        });
+        Route::group(['middleware' => ['permission:5-delete']], function () {
+            Route::get('/photos/delete/{photoId}', 'User\PhotoController@delete')->name('admin.photo.delete');
         });
 	});
 });

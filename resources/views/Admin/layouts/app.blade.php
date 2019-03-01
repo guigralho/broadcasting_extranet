@@ -24,7 +24,7 @@
 
     <link href="{{ asset('css/pace/pace-theme-flash.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/font-awesome/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery-scrollbar/jquery.scrollbar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/select2/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/switchery/switchery.min.css') }}" rel="stylesheet">

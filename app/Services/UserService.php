@@ -1,9 +1,9 @@
 <?php
 
-namespace BeBack\Services;
+namespace Broadcasting\Services;
 
-use BeBack\Models\User;
-use BeBack\Models\UserGroup;
+use Broadcasting\Models\User;
+use Broadcasting\Models\UserGroup;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Cache;
@@ -13,7 +13,7 @@ use DB;
 
 /**
  * Class UserService
- * @package BeBack\Services
+ * @package Broadcasting\Services
  */
 class UserService
 {

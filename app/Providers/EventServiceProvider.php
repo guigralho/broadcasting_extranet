@@ -1,6 +1,6 @@
 <?php
 
-namespace BeBack\Providers;
+namespace Broadcasting\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'BeBack\Events\Event' => [
-            'BeBack\Listeners\EventListener',
+        'Broadcasting\Events\Event' => [
+            'Broadcasting\Listeners\EventListener',
         ],
     ];
 

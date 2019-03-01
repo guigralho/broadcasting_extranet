@@ -1,9 +1,9 @@
 <?php
 
-namespace BeBack\Observers;
+namespace Broadcasting\Observers;
 
-use BeBack\Constants\PermissionTypeConstant;
-use BeBack\Models\Menu;
+use Broadcasting\Constants\PermissionTypeConstant;
+use Broadcasting\Models\Menu;
 use Spatie\Permission\Exceptions\PermissionAlreadyExists;
 use Spatie\Permission\Models\Permission;
 

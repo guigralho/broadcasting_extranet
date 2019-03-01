@@ -2,9 +2,9 @@
 
 namespace Tests;
 
-use BeBack\Constants\UserStatusConstant;
-use BeBack\Models\User;
-use BeBack\Services\UserService;
+use Broadcasting\Constants\UserStatusConstant;
+use Broadcasting\Models\User;
+use Broadcasting\Services\UserService;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;

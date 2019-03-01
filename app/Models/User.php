@@ -1,21 +1,21 @@
 <?php
 
-namespace BeBack\Models;
+namespace Broadcasting\Models;
 
 use Spatie\Permission\Traits\HasRoles;
 
-use BeBack\Observers\DeleteObserver;
+use Broadcasting\Observers\DeleteObserver;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use BeBack\Constants\UserStatusConstant;
-use BeBack\Services\UserService;
+use Broadcasting\Constants\UserStatusConstant;
+use Broadcasting\Services\UserService;
 use Mail;
 use Storage;
 
 /**
  * Class User
- * @package BeBack\Models
+ * @package Broadcasting\Models
  */
 class User extends Authenticatable
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace BeBack\Http\Controllers\Admin\User;
+namespace Broadcasting\Http\Controllers\Admin\User;
 
-use BeBack\Constants\PermissionTypeConstant;
-use BeBack\Services\MenuService;
-use BeBack\Services\PermissionService;
+use Broadcasting\Constants\PermissionTypeConstant;
+use Broadcasting\Services\MenuService;
+use Broadcasting\Services\PermissionService;
 use Illuminate\Http\Request;
-use BeBack\Http\Controllers\Admin\Controller;
-use BeBack\Services\UserGroupService;
+use Broadcasting\Http\Controllers\Admin\Controller;
+use Broadcasting\Services\UserGroupService;
 use Illuminate\Support\Facades\Validator;
-use BeBack\Models\UserGroup;
+use Broadcasting\Models\UserGroup;
 use Spatie\Permission\Models\Role;
 
 class UserGroupController extends Controller

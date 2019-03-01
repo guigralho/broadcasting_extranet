@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use BeBack\Models\UserGroup;
+use Broadcasting\Models\UserGroup;
 use Spatie\Permission\Models\Role;
 
 class UserGroupsTableSeeder extends Seeder
@@ -13,11 +13,11 @@ class UserGroupsTableSeeder extends Seeder
      */
     public function run()
     {
-        $userGroup = new BeBack\Models\UserGroup();
+        $userGroup = new Broadcasting\Models\UserGroup();
         $userGroup->name = 'Administrador';
         $userGroup->save();
 
-        $userGroup = new BeBack\Models\UserGroup();
+        $userGroup = new Broadcasting\Models\UserGroup();
         $userGroup->name = 'Site';
         $userGroup->save();
     }

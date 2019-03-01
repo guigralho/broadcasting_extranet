@@ -14,7 +14,7 @@
                     <div class="col-md-2 m-t-20">
                         <select name="status" class="full-width" id="status" data-init-plugin="select2">
                             <option value="">Status</option>
-                            @foreach(\BeBack\Constants\UserGroupStatusConstant::getConstants() as $key => $userGroupStatus)
+                            @foreach(\Broadcasting\Constants\UserGroupStatusConstant::getConstants() as $key => $userGroupStatus)
                                 <option value="{{ $userGroupStatus }}" @if (request()->get('status') == $userGroupStatus) selected @endif>{{ $userGroupStatus }}</option>
                             @endforeach
                         </select>

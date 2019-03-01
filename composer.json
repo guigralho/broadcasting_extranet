@@ -29,7 +29,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "BeBack\\": "app/"
+            "Broadcasting\\": "app/"
         },
         "files" : ["app/functions.php"]
     },

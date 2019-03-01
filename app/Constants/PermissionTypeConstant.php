@@ -1,10 +1,10 @@
 <?php
-namespace BeBack\Constants;
+namespace Broadcasting\Constants;
 
 class PermissionTypeConstant
 {
 
-    use \BeBack\ConstantTrait;
+    use \Broadcasting\ConstantTrait;
 
     CONST LIST = 'Listar dados';
 

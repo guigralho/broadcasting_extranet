@@ -1,6 +1,6 @@
 <?php
 
-namespace BeBack\Http\Middleware;
+namespace Broadcasting\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

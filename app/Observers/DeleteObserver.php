@@ -1,6 +1,6 @@
 <?php
 
-namespace BeBack\Observers;
+namespace Broadcasting\Observers;
 
 use Auth;
 use Illuminate\Database\Eloquent\Model;

@@ -14,7 +14,7 @@ class CreateUserGroupsTable extends Migration
     public function up()
     {
         Schema::create('user_groups', function (Blueprint $table) {
-            $groupStatus = collect(\BeBack\Constants\UserGroupStatusConstant::getConstants());
+            $groupStatus = collect(\Broadcasting\Constants\UserGroupStatusConstant::getConstants());
 
             $table->increments('id');
             $table->enum('status', $groupStatus->toArray())->default($groupStatus->first());

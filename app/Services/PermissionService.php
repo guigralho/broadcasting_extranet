@@ -1,6 +1,6 @@
 <?php
 
-namespace BeBack\Services;
+namespace Broadcasting\Services;
 
 use Spatie\Permission\Models\Permission;
 

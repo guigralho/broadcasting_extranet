@@ -1,8 +1,8 @@
 <?php
 
-namespace BeBack\Services;
+namespace Broadcasting\Services;
 
-use BeBack\Models\UserGroup;
+use Broadcasting\Models\UserGroup;
 use Cache;
 
 class UserGroupService

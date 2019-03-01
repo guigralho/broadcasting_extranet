@@ -1,6 +1,6 @@
 <?php
 
-use BeBack\Models\Menu;
+use Broadcasting\Models\Menu;
 use Illuminate\Database\Seeder;
 
 class MenuTableSeeder extends Seeder
@@ -14,9 +14,10 @@ class MenuTableSeeder extends Seeder
     {
         collect([
             ['id' => 1, 'name' => 'Dashboard', 'route' => 'admin.home', 'icon' => 'fas fa-tachometer fa-lg', 'order' => 0],
-            ['id' => 2, 'name' => 'Configurações', 'route' => '/', 'icon' => 'fas fa-sliders-h fa-lg', 'order' => 99],
-            ['id' => 3, 'name' => 'Grupos', 'route' => 'admin.user_group', 'icon' => 'fa fa-users', 'order' => 1, 'menu_id' => 2],
-            ['id' => 4, 'name' => 'Usuários', 'route' => 'admin.user', 'icon' => 'fa fa-user-plus', 'order' => 2, 'menu_id' => 2],
+            ['id' => 2, 'name' => 'Settings', 'route' => '/', 'icon' => 'fas fa-sliders-h fa-lg', 'order' => 99],
+            ['id' => 3, 'name' => 'Groups', 'route' => 'admin.user_group', 'icon' => 'fa fa-users', 'order' => 1, 'menu_id' => 2],
+            ['id' => 4, 'name' => 'Users', 'route' => 'admin.user', 'icon' => 'fa fa-user-plus', 'order' => 2, 'menu_id' => 2],
+            ['id' => 5, 'name' => 'Photos', 'route' => 'admin.photo', 'icon' => 'fal fa-camera-retro', 'order' => 1],
         ])->each(function ($data) {
             $menu = Menu::find($data['id']);
             if (!$menu instanceof Menu) {

@@ -1,5 +1,5 @@
 <?php
-namespace BeBack;
+namespace Broadcasting;
 
 
 trait ConstantTrait

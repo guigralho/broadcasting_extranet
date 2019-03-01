@@ -1,6 +1,6 @@
 <?php
 
-namespace BeBack\Console;
+namespace Broadcasting\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

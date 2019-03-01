@@ -1,8 +1,8 @@
 <?php
 
-namespace BeBack\Http\Controllers\Auth;
+namespace Broadcasting\Http\Controllers\Auth;
 
-use BeBack\Http\Controllers\Controller;
+use Broadcasting\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

@@ -1,14 +1,14 @@
 <?php
 
-namespace BeBack\Models;
+namespace Broadcasting\Models;
 
-use BeBack\Observers\DeleteObserver;
-use BeBack\Observers\MenuObserver;
+use Broadcasting\Observers\DeleteObserver;
+use Broadcasting\Observers\MenuObserver;
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Menu
- * @package BeBack\Models
+ * @package Broadcasting\Models
  */
 class Menu extends Model
 {

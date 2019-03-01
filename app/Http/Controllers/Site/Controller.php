@@ -1,8 +1,8 @@
 <?php
 
-namespace BeBack\Http\Controllers\Site;
+namespace Broadcasting\Http\Controllers\Site;
 
-class Controller extends \BeBack\Http\Controllers\Controller
+class Controller extends \Broadcasting\Http\Controllers\Controller
 {
 	
 }

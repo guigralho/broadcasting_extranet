@@ -52,7 +52,7 @@
                             <div class="form-group form-group-default form-group-default-select2 required">
                                 <label>Status</label>
                                 <select name="status" class="full-width form-control" data-init-plugin="select2">
-                                    @foreach(\BeBack\Constants\UserStatusConstant::getConstants() as $key => $userStatus)
+                                    @foreach(\Broadcasting\Constants\UserStatusConstant::getConstants() as $key => $userStatus)
                                         <option value="{{ $userStatus }}" @if (data_get($user, 'status', old('status')) == $userStatus) selected @endif>{{ $userStatus }}</option>
                                     @endforeach
                                 </select>
