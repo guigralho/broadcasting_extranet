@@ -1,62 +1,54 @@
 @extends('layouts.login')
 
 @section('content')
-    <div class="wrap-lg">
-        <div class="area area-left">
-            <div class="conteudo-area">
-                <div class="line-logo">
-                    <div class="logo">
-                        <a href="./">
-                            <img src="{{ asset('site/images/logo-cad-login-beback.svg') }}" alt="">
-                        </a>
-                    </div><!-- logo -->
-                </div><!-- line-logo -->
 
-                <div class="box-texto">
-                    <h2>Faça cada hospedagem se tornar um momento único!</h2>
-                    <p>Desconto garantido sobre a melhor tarifa disponível, parceiros com descontos imperdíveis, serviços exclusivos por status do programa e muito mais.</p>
-                </div><!-- box-texto -->
-            </div><!-- .conteudo-area -->
-        </div><!-- area-left -->
+    <div class="login-wrapper">
+        <!-- START Login Background Pic Wrapper-->
+        <div class="bg-pic">
+            <!-- START Background Pic-->
+            <img src="{{ asset('img/bg.jpg') }}" data-src="{{ asset('img/bg.jpg') }}" data-src-retina="{{ asset('img/bg.jpg') }}"
+                 alt="" class="lazy">
+            <!-- END Background Pic-->
+            <!-- START Background Caption-->
+            <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
+                <h2 class="semi-bold text-white">Broadcasting</h2>
+            </div>
+            <!-- END Background Caption-->
+        </div>
+        <!-- END Login Background Pic Wrapper-->
+        <!-- START Login Right Container-->
+        <div class="login-container bg-white">
+            <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+                {{--<img src="{{ asset('img/logo.svg') }}" alt="logo" data-src="{{ asset('img/logo.svg') }}" data-src-retina="{{ asset('img/logo.svg') }}" width="200">--}}
+                <h3>Redefinir senha</h3>
 
-        <div class="area area-right">
-            <div class="conteudo-area">
-                <div class="formulario">
-                    <h3>Redefinir senha</h3>
-
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+            @endif
+            <!-- START Login Form -->
+                <form method="POST" action="{{ route('password.email') }}">
+                @csrf
+                <!-- START Form Control-->
+                    <div class="form-group form-group-default">
+                        <label class="fade">Email</label>
+                        <div class="controls">
+                            <input type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                            @if ($errors->has('email'))
+                                <label class="text-danger text-hint">{{ $errors->first('email') }}</label>
+                            @endif
                         </div>
-                    @endif
-
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-                        <div class="line-form clearfix">
-                            <p>E-mail</p>
-                            <input type="email" class="ipt-form {{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Insira seu e-mail" name="email" value="{{ old('email') }}" required autofocus>
-
-                            <label class="error">
-                                @if ($errors->has('email'))
-                                    {{ $errors->first('email') }}
-                                @endif
-                            </label>
-                        </div><!-- line-form -->
-
-                        <div class="line-form">
-                            <input type="submit" value="Enviar link" class="btn-submit">
-                        </div><!-- line-form -->
-
-                        <hr>
-
-                        <div class="line-form">
-                            <p class="txt-bottom">
-                                Ainda não possui uma conta? <a href="{{ route('register') }}">Cadastre-se</a>
-                            </p>
-                        </div><!-- line-form -->
-                    </form>
-                </div><!-- formulario -->
-            </div><!-- conteudo-area -->
-        </div><!-- .area-right -->
-    </div><!-- wrap-lg -->
+                    </div>
+                    <!-- END Form Control-->
+                    <!-- START Form Control-->
+                    <!-- END Form Control-->
+                    <button class="btn btn-primary btn-cons m-t-10" type="submit">Enviar link</button>
+                    <a href="{{ route('login') }}" class="btn btn-default btn-cons m-t-10">Voltar</a>
+                </form>
+                <!--END Login Form-->
+            </div>
+        </div>
+        <!-- END Login Right Container-->
+    </div>
 @endsection

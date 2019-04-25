@@ -52,14 +52,14 @@ Route::group(['middleware' => ['auth']], function () {
 
         //photos
         Route::group(['middleware' => ['permission:5-list']], function () {
-            Route::get('/photos', 'User\PhotoController@index')->name('admin.photo');
+            Route::get('/photos', 'PhotoController@index')->name('admin.photo');
         });
         Route::group(['middleware' => ['permission:5-write']], function () {
-            Route::any('/photos/add', 'User\PhotoController@add')->name('admin.photo.add');
-            Route::any('/photos/edit/{photoId}', 'User\PhotoController@edit')->name('admin.photo.edit');
+            Route::any('/photos/add', 'PhotoController@add')->name('admin.photo.add');
+            Route::any('/photos/edit/{photoId}', 'PhotoController@edit')->name('admin.photo.edit');
         });
         Route::group(['middleware' => ['permission:5-delete']], function () {
-            Route::get('/photos/delete/{photoId}', 'User\PhotoController@delete')->name('admin.photo.delete');
+            Route::get('/photos/delete/{photoId}', 'PhotoController@delete')->name('admin.photo.delete');
         });
 	});
 });

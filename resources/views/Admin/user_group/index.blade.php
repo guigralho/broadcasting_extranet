@@ -21,11 +21,11 @@
                     </div>
 
                     <div class="col-md-3 m-t-20">
-                        <input type="text" name="search" class="form-control" placeholder="Pesquisar" value="{{ request()->get('search') }}">
+                        <input type="text" name="search" class="form-control" placeholder="Search" value="{{ request()->get('search') }}">
                     </div>
                     
                     <div class="col-md-1 m-t-20">
-                        <button id="limparCampos" class="btn btn-default">Buscar</button>
+                        <button id="limparCampos" class="btn btn-default">Submit</button>
                     </div>
                 </div>
             </form>
@@ -38,7 +38,7 @@
                                     <th>Status</th>
                                     <th>Nome</th>
                                     <th>Descrição</th>
-                                    <th>Ações</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,7 +60,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="4">Nenhum registro encontrado</td>
+                                        <td colspan="4">No records found</td>
                                     </tr>
                                 @endforelse
                             </tbody>

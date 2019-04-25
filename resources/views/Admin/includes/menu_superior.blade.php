@@ -5,10 +5,11 @@
     <!-- END MOBILE SIDEBAR TOGGLE -->
     <div class="content-center">
         <div class="brand inline   ">
-            <img src="{{ asset('img/logo.svg') }}" alt="logo" data-src="{{ asset('img/logo.svg') }}" data-src-retina="{{ asset('img/logo.svg') }}" width="120">
+            {{--<img src="{{ asset('img/logo.svg') }}" alt="logo" data-src="{{ asset('img/logo.svg') }}" data-src-retina="{{ asset('img/logo.svg') }}" width="120">--}}
+            Logo
         </div>
         <!-- START NOTIFICATION LIST -->
-        <a class="search-link fs-16">Bourbon BeBack</a>
+        <a class="search-link fs-16">Broadcasting</a>
         
         <!-- END NOTIFICATIONS LIST -->
     </div>
@@ -26,7 +27,7 @@
             <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
                 <span class="pull-left">
                     <a href="{{ route('admin.user.change_password') }}" class="dropdown-item">
-                        <i class="fa fa-key"></i> Alterar Senha
+                        <i class="fa fa-key"></i> Change password
                     </a>
                 </span>
                 
@@ -34,7 +35,7 @@
                     <a href="{{ route('logout') }}" class="bg-master-lighter dropdown-item" 
                         onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
-                        {{ __('Sair') }}<span class="pull-right"><i class="pg-power"></i></span>
+                        {{ __('Logout') }}<span class="pull-right"><i class="pg-power"></i></span>
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

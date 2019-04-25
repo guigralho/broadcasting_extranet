@@ -21,3 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/test',function(){
     return "ok";
 });
+
+Route::namespace('Api')->group(function () {
+    Route::get('/upload', 'UploadPhotoController@upload')->name('api.upload_photo');
+});

@@ -18,8 +18,8 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            if (Auth::user()->user_group_id == 2)
-                return redirect(route('site.dashboard'));
+            /*if (Auth::user()->user_group_id == 2)
+                return redirect(route('site.dashboard'));*/
 
             return redirect(route('admin.home'));
         }
