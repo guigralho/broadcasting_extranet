@@ -23,5 +23,5 @@ Route::get('/test',function(){
 });
 
 Route::namespace('Api')->group(function () {
-    Route::get('/upload', 'UploadPhotoController@upload')->name('api.upload_photo');
+    Route::post('/upload', 'UploadPhotoController@upload')->name('api.upload_photo');
 });
