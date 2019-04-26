@@ -1,7 +1,7 @@
 @extends('Admin.layouts.app')
 
 @section('breadcrumb')
-    {{ Breadcrumbs::render('photo') }}
+    {{ Breadcrumbs::render('event') }}
 @endsection
 
 @section('content')
@@ -27,30 +27,26 @@
                             <table class="table table-striped" id="lista">
                                 <thead>
                                     <tr>
-                                        <th>Photo</th>
-                                        <th>Code</th>
                                         <th>Name</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse($listPhotos as $photo )
+                                    @forelse($listEvents as $event )
                                         <tr>
-                                            <td>{{ $photo->image }}</td>
-                                            <td>{{ $photo->code }}</td>
-                                            <td>{{ $photo->name }}</td>
+                                            <td>{{ $event->name }}</td>
                                             <td>
-                                                <a href="{{ route('admin.photo.edit', $photo->id) }}" class="btn btn-info btn-xs">
+                                                <a href="{{ route('admin.event.edit', $event->id) }}" class="btn btn-info btn-xs">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                <a href="javascript:" onclick="verConfirm('{{ route('admin.photo.delete', $photo->id) }}');" rel="tooltip" title="Excluir" class="btn btn-danger btn-xs">
+                                                <a href="javascript:" onclick="verConfirm('{{ route('admin.event.delete', $event->id) }}');" rel="tooltip" title="Excluir" class="btn btn-danger btn-xs">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </td>
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="5">No records found</td>
+                                            <td colspan="2">No records found</td>
                                         </tr>
                                     @endforelse
                                 </tbody>
@@ -58,10 +54,18 @@
                         </div>
 
                         <div class="pull-left">
-                            {{ $listPhotos->total() }} registro(s)
+                            {{ $listEvents->total() }} registro(s)
                         </div>
                         <div class="pull-right">
-                            {{ $listPhotos->links() }}
+                            {{ $listEvents->links() }}
+                        </div>
+
+                        <div class="col-xs-1 col-xs-offset-11">
+                            <div class="form-group">
+                                <a href="{{ route('admin.event.add') }}" class="btn btn-complete btn-novo" style="color: #fff;border-radius: 100%;padding: 10px 15px;position: fixed;bottom: 10px;right: 10px;z-index: 999;">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </div>
                         </div>
 
                     </div>

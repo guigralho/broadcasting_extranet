@@ -56,7 +56,7 @@
                                                 <i class="fa fa-edit"></i>
                                             </a>
                                             <a href="javascript:" onclick="verConfirm('{{ route('admin.user.delete', $user->id) }}');" rel="tooltip" title="Excluir" class="btn btn-danger btn-xs">
-                                                <i class="fa fa-trash-o"></i>
+                                                <i class="fa fa-trash"></i>
                                             </a>
                                         </td>
                                     </tr>

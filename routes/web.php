@@ -61,5 +61,17 @@ Route::group(['middleware' => ['auth']], function () {
         Route::group(['middleware' => ['permission:5-delete']], function () {
             Route::get('/photo/delete/{photoId}', 'PhotoController@delete')->name('admin.photo.delete');
         });
+
+        //events
+        Route::group(['middleware' => ['permission:6-list']], function () {
+            Route::get('/event', 'EventController@index')->name('admin.event');
+        });
+        Route::group(['middleware' => ['permission:6-write']], function () {
+            Route::any('/event/add', 'EventController@add')->name('admin.event.add');
+            Route::any('/event/edit/{eventId}', 'EventController@edit')->name('admin.event.edit');
+        });
+        Route::group(['middleware' => ['permission:6-delete']], function () {
+            Route::get('/event/delete/{eventId}', 'EventController@delete')->name('admin.event.delete');
+        });
 	});
 });

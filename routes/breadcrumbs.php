@@ -51,12 +51,27 @@ Breadcrumbs::register('photo', function ($breadcrumbs) {
     $breadcrumbs->push('Photos', route('admin.photo'));
 });
 
-Breadcrumbs::register('add_photo', function ($breadcrumbs, $userGroup = null) {
+Breadcrumbs::register('add_photo', function ($breadcrumbs, $photo = null) {
     $breadcrumbs->parent('photo');
 
-    if (!$userGroup) {
+    if (!$photo) {
         $breadcrumbs->push('New photo', route('admin.photo.add'));
     } else {
-        $breadcrumbs->push($userGroup->name, route('admin.photo.edit', $userGroup->id));
+        $breadcrumbs->push($photo->name, route('admin.photo.edit', $photo->id));
+    }
+});
+
+//event
+Breadcrumbs::register('event', function ($breadcrumbs) {
+    $breadcrumbs->push('Events', route('admin.event'));
+});
+
+Breadcrumbs::register('add_event', function ($breadcrumbs, $event = null) {
+    $breadcrumbs->parent('event');
+
+    if (!$event) {
+        $breadcrumbs->push('New event', route('admin.event.add'));
+    } else {
+        $breadcrumbs->push($event->name, route('admin.event.edit', $event->id));
     }
 });
