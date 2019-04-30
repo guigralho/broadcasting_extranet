@@ -4,6 +4,8 @@ namespace Broadcasting\Models;
 
 use Broadcasting\Observers\DeleteObserver;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Storage;
 
 class Photo extends Model
 {
