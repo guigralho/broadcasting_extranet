@@ -59,9 +59,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-2">
+                        {{--<div class="col-sm-2">
                             <button class="btn btn-block btn-success js-salvar" type="submit" data-loading-text="Aguarde...">Salvar</button>
-                        </div>
+                        </div>--}}
                         <div class="col-sm-2">
                             <a href="{{ route('admin.photo') }}" class="btn btn-block btn-default "><span>Voltar</span></a>
                         </div>
