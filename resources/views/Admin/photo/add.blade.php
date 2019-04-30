@@ -1,7 +1,7 @@
 @extends('Admin.layouts.app')
 
 @section('breadcrumb')
-    {{ Breadcrumbs::render('add_user', $photo ? $photo : null ) }}
+    {{ Breadcrumbs::render('add_photo', $photo ? $photo : null ) }}
 @endsection
 
 @section('content')
