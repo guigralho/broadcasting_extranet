@@ -19,7 +19,6 @@ class UserGroup extends Model
     public static function boot() {
         parent::boot();
         self::observe(new UserGroupObserver());
-        self::observe(new DeleteObserver());
     }
 
     /**
