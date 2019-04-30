@@ -37,7 +37,9 @@
                             <tbody>
                                 @forelse($listPhotos as $photo )
                                     <tr>
-                                        <td>{{ $photo->image }}</td>
+                                        <td>
+                                            <img src="{{ asset('img/fakeuser.jpeg') }}" alt="">
+                                        </td>
                                         <td>{{ $photo->code }}</td>
                                         <td>{{ $photo->name }}</td>
                                         <td>

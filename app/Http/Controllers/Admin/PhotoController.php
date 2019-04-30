@@ -49,7 +49,7 @@ class PhotoController extends Controller
     		$photo = new Photo;
     		$photo->name = $request->get('name');
     		$photo->code = $request->get('code');
-    		$photo->image = $request->get('image');
+    		$photo->image = $request->file('image');
 
     		if ($photoService->create($photo)) {
     			return redirect(route('admin.photo'));
@@ -69,7 +69,7 @@ class PhotoController extends Controller
 
     		$photo->name = $request->get('name');
             $photo->code = $request->get('code');
-            $photo->image = $request->get('image');
+            $photo->image = $request->file('image');
 
     		if ($photoService->update($photo)) {
     			return redirect(route('admin.photo'));
