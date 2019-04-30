@@ -71,7 +71,7 @@
                                                     <td>{{ $menu->name }}</td>
                                                     <?php
                                                         $permissionTypeConstant->flip()->each(function($permission) use ($menu, $role) {
-                                                            $namePermission = str_slug("{$menu->name}_{$permission}", '-');
+                                                            $namePermission = str_slug("{$menu->id}_{$permission}", '-');
                                                             echo '<td>
                                                                     <div class="container-switcher">
                                                                         <input type="checkbox" data-init-plugin="switchery" data-size="small" '.($role->hasPermissionTo($namePermission) ? "checked" : "").' name="permissoes[]" value="'.$namePermission.'" />
