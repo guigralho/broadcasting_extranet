@@ -39,7 +39,7 @@
                                     @forelse($listPhotos as $photo )
                                         <tr>
                                             <td>
-                                                <img src="{{ asset('img/fakeuser.jpeg') }}" style="width: 80px;">
+                                                <img src="{{ asset('img/fakeuser.png') }}" style="width: 80px;">
                                             </td>
                                             <td>Congresso Internacional 2019 - São Paulo</td>
                                             <td>João Silva</td>

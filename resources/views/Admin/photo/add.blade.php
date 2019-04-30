@@ -14,7 +14,7 @@
                         {{--@if ($photo)
                             @if ($photo->imagePath())--}}
                                 <div class="col-sm-2 m-b-10">
-                                    <img src="{{ asset('img/fakeuser.jpeg') }}" class="img-thumbnail">
+                                    <img src="{{ asset('img/fakeuser.png') }}" class="img-thumbnail">
                                 </div>
                             {{--@endif
                         @endif--}}
