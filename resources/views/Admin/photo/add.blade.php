@@ -20,7 +20,20 @@
                         @endif--}}
 
                         <div class="col-sm-2">
-                            <div class="form-group form-group-default required {{ $errors->has('event_id') ? 'error' : '' }}">
+                            <div class="form-group form-group-default {{ $errors->has('code') ? 'error' : '' }}">
+                                <label>Code</label>
+                                <input type="text" name="code" class="form-control" placeholder="Code" value="{{ data_get($photo, 'code', old('code')) }}">
+
+                                @if ($errors->has('code'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('code') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="form-group form-group-default {{ $errors->has('event_id') ? 'error' : '' }}">
                                 <label>Event</label>
                                 <input type="text" name="event_id" class="form-control" placeholder="Event" value="Congresso Internacional 2019 - São Paulo">
 
@@ -33,7 +46,7 @@
                         </div>
 
                         <div class="col-sm-2">
-                            <div class="form-group form-group-default required {{ $errors->has('photographer') ? 'error' : '' }}">
+                            <div class="form-group form-group-default {{ $errors->has('photographer') ? 'error' : '' }}">
                                 <label>Photographer</label>
                                 <input type="text" name="photographer" class="form-control" placeholder="Photographer" value="João Silva">
 
@@ -46,26 +59,13 @@
                         </div>
 
                         <div class="col-sm-3">
-                            <div class="form-group form-group-default required {{ $errors->has('name') ? 'error' : '' }}">
+                            <div class="form-group form-group-default {{ $errors->has('name') ? 'error' : '' }}">
                                 <label>Name</label>
                                 <input type="text" name="name" class="form-control" placeholder="Nome" value="{{ data_get($photo, 'name', old('name')) }}">
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <div class="form-group form-group-default required {{ $errors->has('code') ? 'error' : '' }}">
-                                <label>Code</label>
-                                <input type="text" name="code" class="form-control" placeholder="Code" value="{{ data_get($photo, 'code', old('code')) }}">
-
-                                @if ($errors->has('code'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('code') }}</strong>
                                     </span>
                                 @endif
                             </div>
