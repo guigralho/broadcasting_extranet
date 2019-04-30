@@ -11,13 +11,13 @@
                 <form action="" method="post">
                     @csrf
                     <div class="row">
-                        {{--@if ($photo)
-                            @if ($photo->imagePath())--}}
+                        @if ($photo)
+                            @if ($photo->imagePath())
                                 <div class="col-sm-2 m-b-10">
-                                    <img src="{{ asset('img/fakeuser.png') }}" class="img-thumbnail">
+                                    <img src="{{ $photo->imagePath() }}" class="img-thumbnail">
                                 </div>
-                            {{--@endif
-                        @endif--}}
+                            @endif
+                        @endif
 
                         <div class="col-sm-2">
                             <div class="form-group form-group-default {{ $errors->has('code') ? 'error' : '' }}">
@@ -35,7 +35,7 @@
                         <div class="col-sm-3">
                             <div class="form-group form-group-default {{ $errors->has('event_id') ? 'error' : '' }}">
                                 <label>Event</label>
-                                <input type="text" name="event_id" class="form-control" placeholder="Event" value="Congresso Internacional 2019 - São Paulo">
+                                <input type="text" name="event_id" class="form-control" placeholder="Event" value="{{ data_get($photo, 'event.name', '') }}">
 
                                 @if ($errors->has('event_id'))
                                     <span class="invalid-feedback">
@@ -48,7 +48,7 @@
                         <div class="col-sm-2">
                             <div class="form-group form-group-default {{ $errors->has('photographer') ? 'error' : '' }}">
                                 <label>Photographer</label>
-                                <input type="text" name="photographer" class="form-control" placeholder="Photographer" value="João Silva">
+                                <input type="text" name="photographer" class="form-control" placeholder="Photographer" value="{{ data_get($photo, 'photographer', old('photographer')) }}">
 
                                 @if ($errors->has('photographer'))
                                     <span class="invalid-feedback">

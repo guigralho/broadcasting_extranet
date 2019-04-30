@@ -4,6 +4,7 @@ namespace Broadcasting\Services;
 
 use Broadcasting\Models\Photo;
 use Cache;
+use Storage;
 
 class PhotoService
 {
@@ -47,7 +48,16 @@ class PhotoService
 
 	public function create(Photo $photo)
 	{
-		return $photo->save();
+        if (!Storage::exists($photo->image) and $photo->image != null) {
+            $oldBlog = $this->findById($photo->id);
+            if (!empty($oldBlog))
+                Storage::delete($oldBlog->image);
+
+            $photo->image = $this->saveFile($photo->image, Photo::IMAGE_PATH);
+        }
+
+        
+        return $photo->save();
 	}
 
 	public function update(Photo $photo)
@@ -57,7 +67,15 @@ class PhotoService
 
 	public function delete(Photo $photo)
 	{
+        Storage::delete($photo->image);
+
 		return $photo->delete();
 	}
 
+    public function saveFile($file, $filePath)
+    {
+        $path = Storage::putFile($filePath, $file, 'public');
+
+        return $path;
+    }
 }

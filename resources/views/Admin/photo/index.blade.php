@@ -39,10 +39,10 @@
                                     @forelse($listPhotos as $photo )
                                         <tr>
                                             <td>
-                                                <img src="{{ asset('img/fakeuser.png') }}" style="width: 80px;">
+                                                <img src="{{ $photo->imagePath() }}" style="width: 80px;">
                                             </td>
-                                            <td>Congresso Internacional 2019 - São Paulo</td>
-                                            <td>João Silva</td>
+                                            <td>{{ data_get($photo, 'event.name', '') }}</td>
+                                            <td>{{ $photo->photographer }}</td>
                                             <td>{{ $photo->code }}</td>
                                             <td>{{ $photo->name }}</td>
                                             <td>

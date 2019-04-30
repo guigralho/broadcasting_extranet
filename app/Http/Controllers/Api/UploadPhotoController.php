@@ -2,30 +2,32 @@
 
 namespace Broadcasting\Http\Controllers\Api;
 
+use Broadcasting\Models\Event;
 use Broadcasting\Models\Photo;
+use Broadcasting\Services\PhotoService;
 use Illuminate\Http\Request;
 
 class UploadPhotoController extends Controller
 {
-    public function upload(Request $request)
+    public function upload(Request $request, PhotoService $photoService)
     {
+        $event = Event::query()->where('name', $request->get('event'));
+
         $photo = new Photo;
         $photo->name = $request->get('name');
         $photo->code = $request->get('code');
-        $photo->image = $request->get('image');//$_FILES['file']['name'];
+        $photo->event_id = $event->id;
+        $photo->photographer = $request->get('photographer');
+        $photo->congregation = $request->get('congregation');
+        $photo->phone = $request->get('phone');
+        $photo->image = $request->file('image');
 
-        /*$target_path = base_path().'/../site/public/photos';
+        if ($photoService->create($photo)) {
+            $data = ['success' => true, 'message' => 'Uploaded successfully'];
+            return response()->json($data, 200);
+        }
 
-        $target_path = $target_path.basename($_FILES['file']['name']);
-
-        if(!move_uploaded_file($_FILES['file']['tmp_name'], $target_path)) {
-            $data = ['success' => false, 'message' => 'There was an error uploading the file, please try again!'];
-            return response()->json($data, 500);
-        }*/
-
-        $photo->save();
-
-        $data = ['success' => true, 'message' => 'Upload feito com sucesso'];
-        return response()->json($data, 200);
+        $data = ['success' => false, 'message' => 'There was an error uploading the file, please try again!'];
+        return response()->json($data, 500);
     }
 }

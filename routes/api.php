@@ -24,4 +24,8 @@ Route::get('/test',function(){
 
 Route::namespace('Api')->group(function () {
     Route::post('/upload', 'UploadPhotoController@upload')->name('api.upload_photo');
+
+    Route::get('/events', function (\Broadcasting\Services\EventService $eventService) {
+        return $eventService->list()->get();
+    });
 });
