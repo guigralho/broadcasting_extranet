@@ -31,7 +31,7 @@
                                         <th>Event</th>
                                         <th>Photographer</th>
                                         <th style="width: 10%">Code</th>
-                                        <th>Name</th>
+                                        <th>Model</th>
                                         <th style="width: 10%">Actions</th>
                                     </tr>
                                 </thead>

@@ -60,8 +60,8 @@
 
                         <div class="col-sm-3">
                             <div class="form-group form-group-default {{ $errors->has('name') ? 'error' : '' }}">
-                                <label>Name</label>
-                                <input type="text" name="name" class="form-control" placeholder="Nome" value="{{ data_get($photo, 'name', old('name')) }}">
+                                <label>Model</label>
+                                <input type="text" name="name" class="form-control" placeholder="Model" value="{{ data_get($photo, 'name', old('name')) }}">
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
