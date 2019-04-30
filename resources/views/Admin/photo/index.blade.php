@@ -27,7 +27,9 @@
                             <table class="table table-striped" id="lista">
                                 <thead>
                                     <tr>
-                                        <th>Photo</th>
+                                        <th></th>
+                                        <th>Event</th>
+                                        <th>Photographer</th>
                                         <th>Code</th>
                                         <th>Name</th>
                                         <th>Actions</th>
@@ -39,6 +41,8 @@
                                             <td>
                                                 <img src="{{ asset('img/fakeuser.jpeg') }}" style="width: 80px;">
                                             </td>
+                                            <td>Congresso Internacional 2019 - São Paulo</td>
+                                            <td>João Silva</td>
                                             <td>{{ $photo->code }}</td>
                                             <td>{{ $photo->name }}</td>
                                             <td>

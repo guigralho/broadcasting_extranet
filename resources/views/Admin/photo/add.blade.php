@@ -11,19 +11,6 @@
                 <form action="" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-sm-3">
-                            <div class="form-group form-group-default {{ $errors->has('image') ? 'error' : '' }}">
-                                <label>Photo</label>
-                                <input type="file" name="image" data-ui-file-upload="true" value="{{ data_get($photo, 'image', old('image')) }}">
-
-                                @if ($errors->has('image'))
-                                    <span class="invalid-feedback">
-                                            <strong>{{ $errors->first('image') }}</strong>
-                                        </span>
-                                @endif
-                            </div>
-                        </div>
-
                         {{--@if ($photo)
                             @if ($photo->imagePath())--}}
                                 <div class="col-sm-2 m-b-10">
@@ -31,6 +18,32 @@
                                 </div>
                             {{--@endif
                         @endif--}}
+
+                        <div class="col-sm-2">
+                            <div class="form-group form-group-default required {{ $errors->has('event_id') ? 'error' : '' }}">
+                                <label>Event</label>
+                                <input type="text" name="event_id" class="form-control" placeholder="Event" value="Congresso Internacional 2019 - São Paulo">
+
+                                @if ($errors->has('event_id'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('event_id') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group form-group-default required {{ $errors->has('photographer') ? 'error' : '' }}">
+                                <label>Photographer</label>
+                                <input type="text" name="photographer" class="form-control" placeholder="Photographer" value="João Silva">
+
+                                @if ($errors->has('photographer'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('photographer') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="col-sm-3">
                             <div class="form-group form-group-default required {{ $errors->has('name') ? 'error' : '' }}">
