@@ -10,29 +10,28 @@
             <div class="tab-pane slide-left active">
                 <form action="" method="post">
                     @csrf
-                    
-                    <div class="col-sm-3">
-                        <div class="form-group form-group-default {{ $errors->has('image') ? 'error' : '' }}">
-                            <label>Photo</label>
-                            <input type="file" name="image" data-ui-file-upload="true" value="{{ data_get($photo, 'image', old('image')) }}">
-
-                            @if ($errors->has('image'))
-                                <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('image') }}</strong>
-                                    </span>
-                            @endif
-                        </div>
-                    </div>
-
-                    {{--@if ($photo)
-                        @if ($photo->imagePath())--}}
-                            <div class="col-sm-2 m-b-10">
-                                <img src="{{ asset('img/fakeuser.jpeg') }}" class="img-thumbnail">
-                            </div>
-                        {{--@endif
-                    @endif--}}
-
                     <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group form-group-default {{ $errors->has('image') ? 'error' : '' }}">
+                                <label>Photo</label>
+                                <input type="file" name="image" data-ui-file-upload="true" value="{{ data_get($photo, 'image', old('image')) }}">
+
+                                @if ($errors->has('image'))
+                                    <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('image') }}</strong>
+                                        </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        {{--@if ($photo)
+                            @if ($photo->imagePath())--}}
+                                <div class="col-sm-2 m-b-10">
+                                    <img src="{{ asset('img/fakeuser.jpeg') }}" class="img-thumbnail">
+                                </div>
+                            {{--@endif
+                        @endif--}}
+
                         <div class="col-sm-4">
                             <div class="form-group form-group-default required {{ $errors->has('name') ? 'error' : '' }}">
                                 <label>Name</label>
@@ -45,9 +44,7 @@
                                 @endif
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group form-group-default required {{ $errors->has('code') ? 'error' : '' }}">
                                 <label>Code</label>
