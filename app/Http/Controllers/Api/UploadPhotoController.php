@@ -22,6 +22,10 @@ class UploadPhotoController extends Controller
         $photo->phone = $request->get('phone');
         $photo->image = $request->file('file');
 
+        $target_path = base_path().'/public/img/photos/';
+        $target_path = $target_path . basename( $_FILES['file']['name']);
+        move_uploaded_file($_FILES['file']['tmp_name'], $target_path);
+
         if ($photoService->create($photo)) {
             $data = ['success' => true, 'message' => 'Uploaded successfully'];
             return response()->json($data, 200);
