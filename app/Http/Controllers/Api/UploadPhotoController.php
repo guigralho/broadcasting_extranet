@@ -20,7 +20,7 @@ class UploadPhotoController extends Controller
         $photo->photographer = $request->get('photographer');
         $photo->congregation = $request->get('congregation');
         $photo->phone = $request->get('phone');
-        $photo->image = $request->file('image');
+        $photo->image = $request->file('file');
 
         if ($photoService->create($photo)) {
             $data = ['success' => true, 'message' => 'Uploaded successfully'];

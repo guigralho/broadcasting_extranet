@@ -49,7 +49,7 @@ class PhotoService
 	public function create(Photo $photo)
 	{
         if (!Storage::exists($photo->image) and $photo->image != null) {
-            $oldBlog = $this->findById($photo->id);
+            $oldBlog = $this->findPhotoById($photo->id);
             if (!empty($oldBlog))
                 Storage::delete($oldBlog->image);
 
