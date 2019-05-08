@@ -11,6 +11,9 @@ class UploadPhotoController extends Controller
 {
     public function upload(Request $request, PhotoService $photoService)
     {
+        header('Access-Control-Allow-Headers: "Origin, X-Requested-With, Content-Type, Accept"');
+        header("Access-Control-Allow-Origin: *", false);
+
         $event = Event::query()->where('name', $request->get('event'));
 
         $photo = new Photo;

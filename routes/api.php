@@ -22,10 +22,14 @@ Route::get('/test',function(){
     return "ok";
 });
 
-Route::namespace('Api')->group(function () {
-    Route::post('/upload', 'UploadPhotoController@upload')->name('api.upload_photo');
+Route::group(['middleware' => ['cors']], function () {
+	Route::namespace('Api')->group(function () {
+	    Route::post('/upload', 'UploadPhotoController@upload')->name('api.upload_photo');
 
-    Route::get('/events', function (\Broadcasting\Services\EventService $eventService) {
-        return $eventService->list()->get();
-    });
+	    Route::get('/events', function (\Broadcasting\Services\EventService $eventService) {
+	    	$events = $eventService->list()->get();
+
+	    	return response()->json($events, 200);
+	    });
+	});
 });
