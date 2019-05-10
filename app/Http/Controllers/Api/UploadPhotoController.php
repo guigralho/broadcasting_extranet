@@ -21,6 +21,7 @@ class UploadPhotoController extends Controller
         $photo->congregation = $request->get('congregation');
         $photo->phone = $request->get('phone');
         $photo->image = $request->file('file');
+        $photo->photo_date = date('Y-m-d', $request->get('timestamp'));
 
         if ($photoService->create($photo)) {
             $data = ['success' => true, 'message' => 'Uploaded successfully'];
