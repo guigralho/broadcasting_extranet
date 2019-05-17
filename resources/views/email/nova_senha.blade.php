@@ -13,7 +13,7 @@
     <td align="center" bgcolor="#f9f9f9" style="padding: 30px 20px 30px 20px; font-family: Arial, sans-serif;">
         <table bgcolor="#0e683f" border="0" cellspacing="0" cellpadding="0" class="buttonwrapper">
             <tr>
-                <td align="center" height="50" style="padding:0 25px 0 25px;font-family:Arial,sans-serif;background:#0e683f;font-size:16px;font-weight:bold" class="button">
+                <td align="center" height="50" style="padding:0 25px 0 25px;font-family:Arial,sans-serif;background:#0e3e68;font-size:16px;font-weight:bold" class="button">
                     <a href="{{ route('login') }}" style="color: #ffffff; text-align: center; text-decoration: none;">Acesse sua Conta</a>
                 </td>
             </tr>
