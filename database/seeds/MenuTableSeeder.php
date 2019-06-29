@@ -19,6 +19,7 @@ class MenuTableSeeder extends Seeder
             ['id' => 4, 'name' => 'Users', 'route' => 'admin.user', 'icon' => 'fa fa-user-plus', 'order' => 2, 'menu_id' => 2],
             ['id' => 5, 'name' => 'Photos', 'route' => 'admin.photo', 'icon' => 'fal fa-camera-retro', 'order' => 1],
             ['id' => 6, 'name' => 'Events', 'route' => 'admin.event', 'icon' => 'fal fa-list', 'order' => 2],
+            ['id' => 7, 'name' => 'Photographers', 'route' => 'admin.photographer', 'icon' => 'fal fa-portrait', 'order' => 3],
         ])->each(function ($data) {
             $menu = Menu::find($data['id']);
             if (!$menu instanceof Menu) {

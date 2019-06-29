@@ -73,5 +73,17 @@ Route::group(['middleware' => ['auth']], function () {
         Route::group(['middleware' => ['permission:6-delete']], function () {
             Route::get('/event/delete/{eventId}', 'EventController@delete')->name('admin.event.delete');
         });
+
+        //photographer
+        Route::group(['middleware' => ['permission:7-list']], function () {
+            Route::get('/photographer', 'PhotographerController@index')->name('admin.photographer');
+        });
+        Route::group(['middleware' => ['permission:7-write']], function () {
+            Route::any('/photographer/add', 'PhotographerController@add')->name('admin.photographer.add');
+            Route::any('/photographer/edit/{photographerId}', 'PhotographerController@edit')->name('admin.photographer.edit');
+        });
+        Route::group(['middleware' => ['permission:7-delete']], function () {
+            Route::get('/photographer/delete/{photographerId}', 'PhotographerController@delete')->name('admin.photographer.delete');
+        });
 	});
 });

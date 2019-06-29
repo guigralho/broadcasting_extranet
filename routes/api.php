@@ -31,5 +31,11 @@ Route::group(['middleware' => ['cors']], function () {
 
 	    	return response()->json($events, 200);
 	    });
+
+        Route::get('/photographers', function (\Broadcasting\Services\PhotographerService $photographerService) {
+            $photographers = $photographerService->list()->get();
+
+            return response()->json($photographers, 200);
+        });
 	});
 });

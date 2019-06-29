@@ -75,3 +75,18 @@ Breadcrumbs::register('add_event', function ($breadcrumbs, $event = null) {
         $breadcrumbs->push($event->name, route('admin.event.edit', $event->id));
     }
 });
+
+//photographer
+Breadcrumbs::register('photographer', function ($breadcrumbs) {
+    $breadcrumbs->push('Photographers', route('admin.photographer'));
+});
+
+Breadcrumbs::register('add_photographer', function ($breadcrumbs, $photographer = null) {
+    $breadcrumbs->parent('photographer');
+
+    if (!$photographer) {
+        $breadcrumbs->push('New photographer', route('admin.photographer.add'));
+    } else {
+        $breadcrumbs->push($photographer->name, route('admin.photographer.edit', $photographer->id));
+    }
+});
