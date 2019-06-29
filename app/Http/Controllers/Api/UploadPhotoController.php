@@ -19,9 +19,10 @@ class UploadPhotoController extends Controller
         $photo->event_id = $event->id;
         $photo->photographer = $request->get('photographer');
         $photo->congregation = $request->get('congregation');
+        $photo->observation = $request->get('observation');
         $photo->phone = $request->get('phone');
         $photo->image = $request->file('file');
-        $photo->photo_date = date('Y-m-d', strtotime($request->get('timestamp')));
+        $photo->photo_date = date('Y-m-d H:i:s', strtotime($request->get('timestamp')));
 
         if ($photoService->create($photo)) {
             $data = ['success' => true, 'message' => 'Uploaded successfully'];

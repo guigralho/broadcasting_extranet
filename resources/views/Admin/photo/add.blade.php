@@ -112,6 +112,19 @@
                                         @endif
                                     </div>
                                 </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group form-group-default {{ $errors->has('observation') ? 'error' : '' }}">
+                                        <label>Observation</label>
+                                        <textarea name="observation" class="form-control" cols="30" rows="10" style="height: 200px">{{ data_get($photo, 'observation', old('observation')) }}</textarea>
+
+                                        @if ($errors->has('observation'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('observation') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
