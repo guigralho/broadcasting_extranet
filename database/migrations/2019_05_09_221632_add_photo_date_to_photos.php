@@ -14,7 +14,7 @@ class AddPhotoDateToPhotos extends Migration
     public function up()
     {
         Schema::table('photos', function (Blueprint $table) {
-            $table->date('photo_date')->nullable()->after('congregation');
+            $table->datetime('photo_date')->nullable()->after('congregation');
         });
     }
 
