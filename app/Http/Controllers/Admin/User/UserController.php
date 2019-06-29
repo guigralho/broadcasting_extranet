@@ -79,7 +79,7 @@ class UserController extends Controller
             $user->status = $request->get('status');
             $user->user_group_id = $request->get('user_group_id');
 
-            if ($userService->create($user)) {
+            if ($userService->create($user, true)) {
                 return redirect(route('admin.user'));
             }
         }

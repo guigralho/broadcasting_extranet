@@ -36,8 +36,8 @@
             </td>
         </tr>
         <tr>
-            <td align="center" bgcolor="#0e683f" style="padding: 50px 20px; color: #ffffff; font-family: Arial, sans-serif; font-size: 36px; font-weight: bold;">
-                <img src="{{ asset('img/logo_branco.svg') }}" alt="App" height="40" style="display:block;" />
+            <td align="center" style="background-color:#0e3e68; padding: 50px 20px; color: #ffffff; font-family: Arial, sans-serif; font-size: 36px; font-weight: bold;">
+                <img src="{{ asset('img/logo_branco.svg') }}" alt="{{ env('APP_NAME') }}" height="40" style="display:block;" />
             </td>
         </tr>
 
@@ -45,7 +45,8 @@
         
         <tr>
           <td align="center" bgcolor="#dddddd" style="padding: 15px 10px 15px 10px; color: #555555; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px;">
-            <b>App</b><br/>0800 111 1111 | <a href="mailto:sac@sac.com.br" style="border:none;color:#0084b4;text-decoration:none" target="_blank">sac@sac.com.br </a>
+            <b>{{ env('APP_NAME') }}</b>
+            {{--<br/>0800 111 1111 | <a href="mailto:sac@sac.com.br" style="border:none;color:#0084b4;text-decoration:none" target="_blank">sac@sac.com.br </a>--}}
           </td>
         </tr>
       </table>
