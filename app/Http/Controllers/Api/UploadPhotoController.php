@@ -22,7 +22,7 @@ class UploadPhotoController extends Controller
         $photo->observation = $request->get('observation');
         $photo->phone = $request->get('phone');
         $photo->image = $request->file('file');
-        $photo->photo_date = date('Y-m-d H:i:s', strtotime($request->get('timestamp')));
+        $photo->photo_date = date('Y-m-d H:i:s', strtotime(str_replace('/', '-', $request->get('timestamp'))));
 
         if ($photoService->create($photo)) {
             $data = ['success' => true, 'message' => 'Uploaded successfully'];
