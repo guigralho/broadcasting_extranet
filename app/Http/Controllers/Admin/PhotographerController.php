@@ -33,7 +33,7 @@ class PhotographerController extends Controller
     	if ($request->has('status')) 
     		$search['searchStatus'] = $request->get('status');    	
 
-    	$listPhotographers = $photographerService->list($search)->paginate(15);
+    	$listPhotographers = $photographerService->list($search)->orderBy('name')->paginate(15);
 
         return view('Admin.photographer.index', compact('listPhotographers'));
     }

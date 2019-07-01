@@ -33,7 +33,7 @@ class EventController extends Controller
     	if ($request->has('status')) 
     		$search['searchStatus'] = $request->get('status');    	
 
-    	$listEvents = $eventService->list($search)->paginate(15);
+    	$listEvents = $eventService->list($search)->orderBy('name')->paginate(15);
 
         return view('Admin.event.index', compact('listEvents'));
     }

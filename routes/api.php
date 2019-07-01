@@ -27,13 +27,13 @@ Route::group(['middleware' => ['cors']], function () {
 	    Route::post('/upload', 'UploadPhotoController@upload')->name('api.upload_photo');
 
 	    Route::get('/events', function (\Broadcasting\Services\EventService $eventService) {
-	    	$events = $eventService->list()->get();
+	    	$events = $eventService->list()->orderBy('name')->get();
 
 	    	return response()->json($events, 200);
 	    });
 
         Route::get('/photographers', function (\Broadcasting\Services\PhotographerService $photographerService) {
-            $photographers = $photographerService->list()->get();
+            $photographers = $photographerService->list()->orderBy('name')->get();
 
             return response()->json($photographers, 200);
         });
